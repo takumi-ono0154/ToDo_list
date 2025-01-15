@@ -42,6 +42,17 @@ const handleEdit = (id: number, inputValue: string) => {
   setTodos(newTodos)
 };
 
+const handleChecked = (id: number, checked: boolean) => {
+  const newTodos = todos.map((todo) =>  {
+    if(todo.id === id){
+      todo.checked = !checked
+    }
+    return todo;
+  });
+
+  setTodos(newTodos)
+};
+
   return (
     <div className="App">
       <div>
@@ -61,6 +72,11 @@ const handleEdit = (id: number, inputValue: string) => {
                 onChange={(e) => handleEdit(todo.id, e.target.value)}
                 className="inputText"
                 value={todo.inputValue}
+                disabled={todo.checked}
+              />
+              <input 
+                type="checkbox"
+                onChange={(e) => handleChecked(todo.id, todo.checked)}
               />
             </li>
           ))}
