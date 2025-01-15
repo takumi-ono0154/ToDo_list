@@ -53,6 +53,11 @@ const handleChecked = (id: number, checked: boolean) => {
   setTodos(newTodos)
 };
 
+const handleDelete = (id: number) => {
+  const newTodos = todos.filter((todo) => todo.id !== id);
+  setTodos(newTodos);
+};
+
   return (
     <div className="App">
       <div>
@@ -78,6 +83,7 @@ const handleChecked = (id: number, checked: boolean) => {
                 type="checkbox"
                 onChange={(e) => handleChecked(todo.id, todo.checked)}
               />
+              <button onClick={() => handleDelete(todo.id)}>消</button>
             </li>
           ))}
         </ul>
