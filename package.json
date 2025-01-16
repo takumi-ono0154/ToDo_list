@@ -2,6 +2,7 @@
   "name": "todolist",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://{takumi-ono0154}.github.io/{todo_list}/",
   "dependencies": {
     "cra-template-typescript": "1.2.0",
     "react": "^19.0.0",
@@ -9,9 +10,10 @@
   },
   "scripts": {
     "start": "vite",
-	  "build": "tsc --noEmit && vite build",
-	  "serve": "vite preview",
-	  "test": "jest"
+    "build": "tsc --noEmit && vite build",
+    "serve": "vite preview",
+    "test": "jest",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +42,7 @@
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.7.3",
     "vite": "^6.0.7",
     "web-vitals": "^4.2.4"
