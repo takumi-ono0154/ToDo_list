@@ -1,6 +1,6 @@
 # React + Typescript を使用したTodoリスト
 
-[Todo List](https://takumi-ono0154.github.io/todo_list/)
+[ToDo List](https://takumi-ono0154.github.io/todo_list/)
 
 ## 使用方法
 1. ボックスにタスクを入力します
